@@ -36,3 +36,6 @@ Below are steps to set up [AWS EMR](https://aws.amazon.com/elasticmapreduce/) wi
       ```
 
 ## Now you have an AWS EMR cluster running Sparkling Water!
+
+  - To open up H2O Flow running Sparkling Water you would need to point your browser to the Master DNS with the port 54321
+  - Sparkling Water demos are also available here: [https://github.com/h2oai/sparkling-water/tree/master/examples](https://github.com/h2oai/sparkling-water/tree/master/examples)
