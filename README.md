@@ -28,7 +28,6 @@ Below are steps to set up [AWS EMR](https://aws.amazon.com/elasticmapreduce/) wi
 
 # Launch Sparkling Water from your new EMR cluster:
 
-## Step 1
   - SSH into your new EMR cluster as follows:
     -  Navigate to `Master public DNS` and click on `SSH`, which will give you instructions on getting into the EMR master node
   - After you ssh into your cluster run the following to start up Sparkling Water:
