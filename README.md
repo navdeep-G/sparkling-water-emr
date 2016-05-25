@@ -32,10 +32,16 @@ Below are steps to set up [AWS EMR](https://aws.amazon.com/elasticmapreduce/) wi
     -  Navigate to `Master public DNS` and click on `SSH`, which will give you instructions on getting into the EMR master node
   - After you ssh into your cluster run the following to start up Sparkling Water (in Spark Shell):
       ```
-      spark-shell  --packages ai.h2o:sparkling-water-examples_2.10:1.6.3 --executor-memory=3g --driver-memory=3g --conf spark.driver.extraJavaOptions=-Dai.h2o.flow_dir=/tmp/flowdir /dev/null
+      spark-shell --packages ai.h2o:sparkling-water-examples_2.10:1.6.3 --executor-memory=6g --driver-memory=6g
       ```
-
+  - Now you should have a spark shell running. Next, run the following commands to set up Sparkling Water:
+      ```
+      import org.apache.spark.h2o._
+      val hc = H2OContext.getOrCreate(sc)
+      ```
+  - Now you should see two URL's that point to H2O's flow interface. Please point to those in your browser to get access.
+  
 ## Now you have an AWS EMR cluster running Sparkling Water!
 
-  - To open up H2O Flow running Sparkling Water you would need to point your browser to the Master DNS with the port 54321
   - Sparkling Water demos are also available here: [https://github.com/h2oai/sparkling-water/tree/master/examples](https://github.com/h2oai/sparkling-water/tree/master/examples)
+  - To run these demos you must copy them into your master EMR node.
