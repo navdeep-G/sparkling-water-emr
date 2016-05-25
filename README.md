@@ -30,9 +30,9 @@ Below are steps to set up [AWS EMR](https://aws.amazon.com/elasticmapreduce/) wi
 
   - SSH into your new EMR cluster as follows:
     -  Navigate to `Master public DNS` and click on `SSH`, which will give you instructions on getting into the EMR master node
-  - After you ssh into your cluster run the following to start up Sparkling Water:
+  - After you ssh into your cluster run the following to start up Sparkling Water (in Spark Shell):
       ```
-      spark-submit --class water.SparklingWaterDriver --packages ai.h2o:sparkling-water-examples_2.10:1.6.3 --executor-memory=3g --driver-memory=3g  /dev/null
+      spark-shell  --packages ai.h2o:sparkling-water-examples_2.10:1.6.3 --executor-memory=3g --driver-memory=3g --conf spark.driver.extraJavaOptions=-Dai.h2o.flow_dir=/tmp/flowdir /dev/null
       ```
 
 ## Now you have an AWS EMR cluster running Sparkling Water!
