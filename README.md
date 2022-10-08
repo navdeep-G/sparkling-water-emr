@@ -4,14 +4,14 @@ Below are steps to set up [AWS EMR](https://aws.amazon.com/elasticmapreduce/) wi
 
 # Setting up your EMR Cluster:
 
-##Step 1
+## Step 1
   - Set up AWS credentials
     - Go to [https://aws.amazon.com/](https://aws.amazon.com/) and click the link `Create an AWS Account`
 
-##Step 2
+## Step 2
   - Sign into your AWS Console and navigate to `EMR` under `Analytics`
 
-##Step 3
+## Step 3
   - Configure your EMR instance as follows:
     - Cluster name: 'MyCluster'
     - Leave `Logging` checked
